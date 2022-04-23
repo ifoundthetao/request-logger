@@ -19,3 +19,14 @@ You can then use that information to continue to spider and build out more surfa
                             Write to a findings to a file.
       -q, --quiet           Suppress all output
       -w WAIT, --wait WAIT  Time to wait for page load. Defaults to 1 second.
+
+# Testing
+To test this, you can use the supplied script by hosting an HTTP server with the test.html in the directory.
+
+    cd test && python3 -m http.server 8888
+
+Then simply run the script against it:
+
+    python requestlogger.py "http://127.0.0.1:8888" -w 3
+
+Should give you some output to check against.
