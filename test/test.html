@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <!-- domain exists, is found -->
+        <script src=https://google.com></script>
+        <!-- domain exists, is found -->
+        <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/41Gc3C8UysL.css?AUIClients/AmazonGatewayAuiAssets" />
+        <!-- is not found, maybe because ... it's requested some other way? -->
+        <link rel="icon" href="https://www.w3schools.com/favicon.ico?rando=123413413" type="image/x-icon">
+    </head>
+    <body>
+        <!-- domain does not exist, file does not exist, does not show up unless proxied -->
+        <img src="https://www.eskimoskiing.com/img.src">
+        <!-- domain exists, file does not exist, shows up -->
+        <img src="https://i.redd.it/v2"> 
+        <!-- domain and file exist, shows up -->
+        <img src="https://placekitten.com/355/400">
+        <script>
+        var xhttp = new XMLHttpRequest();
+        // Ajax / JS test, shows up
+        xhttp.open("GET", "https://www.example.com");
+        xhttp.send();
+
+        // wss test, shows up
+        var exampleSocket = new WebSocket("wss://www.example1.com/socketserver", "protocolOne");
+        // ws test, shows up
+        var exampleSocket2 = new WebSocket("ws://www.insecure-example1.com/socketserver", "protocolOne");
+        </script>
+    </body>
+</html>
