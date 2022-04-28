@@ -1,9 +1,7 @@
 [[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
+url = "https://pypi.python.org/simple"
 verify_ssl = true
-
-[dev-packages]
+name = "pypi"
 
 [packages]
 selenium-wire = "*"
@@ -11,5 +9,7 @@ selenium = "*"
 urllib3 = "*"
 argparse = "*"
 
+[dev-packages]
+
 [requires]
-python_version = "3.8.2"
+python_version = "3.8"
