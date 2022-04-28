@@ -40,7 +40,7 @@ parser.add_argument("page", help="Web Page to check")
 parser.add_argument("-o", "--output", help="Write to a findings to a file.")
 parser.add_argument("-q", "--quiet", help="Suppress all output", action="store_true")
 parser.add_argument("-s", "--sort", help="Sorts output alphabetically", action="store_true")
-parser.add_argument("-w", "--wait", help="Time to wait for page load. Defaults to 1 second.", type=int)
+parser.add_argument("-w", "--wait", help="Time to wait for page load. Defaults to 1 second.", type=int, default=1)
 
 args = parser.parse_args()
 
